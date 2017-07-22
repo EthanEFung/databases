@@ -10,9 +10,10 @@ CREATE TABLE users (
 
 CREATE TABLE messages (
   id INTEGER PRIMARY KEY,
-  msg TEXT NOT NULL,
-  author INTEGER,
-  FOREIGN KEY(author) REFERENCES users(id)
+  username TEXT NOT NULL,
+  message TEXT NOT NULL,
+  userId INTEGER,
+  FOREIGN KEY(userId) REFERENCES users(id)
   /* Describe your table here.*/
 );
 /* Create other tables and define schemas for them here! */
